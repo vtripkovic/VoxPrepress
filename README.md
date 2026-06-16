@@ -11,6 +11,7 @@ python -m http.server 8000
 ```
 
 Notes / next steps:
+
 - Replace `you@yourdomain.com` in `index.html` with your real contact email.
 - Update the Google Maps query in the iframe `src` to your address.
 - Add real portfolio images in `css`/`js` or an `assets/images` folder and update `renderPortfolio()`.
