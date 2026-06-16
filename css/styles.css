@@ -13,7 +13,9 @@
 html,body{height:100%;margin:0;background:linear-gradient(180deg,#071025 0%, #081222 60%);color:var(--text)}
 .container{max-width:var(--container);margin:0 auto;padding:1.25rem}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.logo{font-weight:700;color:var(--text);text-decoration:none;font-size:1.125rem}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--text);text-decoration:none;font-size:1.125rem}
+.logo-icon{width:36px;height:36px;display:inline-block}
+.logo-text{display:inline-block}
 .main-nav{display:flex;gap:1rem}
 .main-nav a{color:var(--muted);text-decoration:none;padding:.4rem .6rem;border-radius:6px}
 .main-nav a:hover{color:var(--text);background:rgba(255,255,255,0.03)}
