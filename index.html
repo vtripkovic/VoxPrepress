@@ -4,22 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vox Prepress — Print Design & Prepress</title>
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon_vox.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner container-full">
       <a class="logo" href="#home">
-        <img src="assets/icon.svg" alt="VoxPrepress" class="logo-icon">
+        <img src="assets/icon_vox.svg" alt="VoxPrepress" class="logo-icon">
         <span class="logo-text">VoxPrepress</span>
       </a>
       <nav class="main-nav" id="mainNav">
-        <a href="#home" data-nav>Home</a>
-        <a href="#blog" data-nav>Blog</a>
-        <a href="#portfolio" data-nav>Portfolio</a>
-        <a href="#contact" data-nav>Contact</a>
+        <a data-i18n="nav.home" href="#home" data-nav>Home</a>
+        <a data-i18n="nav.blog" href="#blog" data-nav>Blog</a>
+        <a data-i18n="nav.portfolio" href="#portfolio" data-nav>Portfolio</a>
+        <a data-i18n="nav.contact" href="#contact" data-nav>Contact</a>
       </nav>
       <div class="actions">
         <div class="lang-toggle">
@@ -32,10 +33,18 @@
   </header>
 
   <main>
-    <section id="home" class="hero container">
-      <div class="hero-inner">
-        <h1 data-i18n="home.title">Print design & prepress — professional finishing</h1>
-        <p data-i18n="home.lead">We prepare files correctly for offset, digital, screen and flexo printing. Layouts for books, flyers, posters, wobblers, bulletins and business cards.</p>
+    <section id="home" class="section hero">
+      <div class="container hero-inner">
+        <h1 data-i18n="home.title">Print design & prepress — professional finishing</h1>        
+          <p data-i18n="home.lead">We prepare files correctly for offset, digital, screen and flexo printing. Layouts for books, flyers, posters, wobblers, bulletins and business cards.</p>
+        
+        
+      </div>
+    </section>
+
+    <section id="blog" class="section hero">
+      <h2 data-i18n="blog.title">Blog — Preparing artwork for print</h2>
+      <div id="posts" class="posts">
         <div class="services" aria-hidden="false">
           <div class="card"><h3 data-i18n="services.book">Books / Prelom</h3></div>
           <div class="card"><h3 data-i18n="services.flyer">Flyers</h3></div>
@@ -44,35 +53,31 @@
           <div class="card"><h3 data-i18n="services.bulletin">Bulletins</h3></div>
           <div class="card"><h3 data-i18n="services.vcard">Business Cards</h3></div>
         </div>
-      </div>
-    </section>
-
-    <section id="blog" class="container section">
-      <h2 data-i18n="blog.title">Blog — Preparing artwork for print</h2>
-      <div id="posts" class="posts">
         <!-- Posts injected by JS -->
       </div>
     </section>
 
-    <section id="portfolio" class="container section">
+    <section id="portfolio" class="section hero">
       <h2 data-i18n="portfolio.title">Portfolio</h2>
       <div class="grid" id="portfolioGrid">
         <!-- Portfolio items -> JS-injected placeholders -->
       </div>
     </section>
 
-    <section id="contact" class="container section contact">
+    <section id="contact" class="section contact">
       <h2 data-i18n="contact.title">Contact</h2>
-      <div class="contact-grid">
-        <form id="contactForm">
-          <label data-i18n="contact.name">Name</label>
-          <input type="text" id="name" required>
-          <label data-i18n="contact.email">Email</label>
-          <input type="email" id="email" required>
-          <label data-i18n="contact.message">Message</label>
-          <textarea id="message" rows="6" required></textarea>
-          <button type="submit" class="btn" data-i18n="contact.send">Send Message</button>
-        </form>
+      <div class="container contact-grid">
+        <div class="contact-left">
+          <form id="contactForm">
+            <label data-i18n="contact.name">Name</label>
+            <input type="text" id="name" required>
+            <label data-i18n="contact.email">Email</label>
+            <input type="email" id="email" required>
+            <label data-i18n="contact.message">Message</label>
+            <textarea id="message" rows="6" required></textarea>
+            <button type="submit" class="btn" data-i18n="contact.send">Send Message</button>
+          </form>
+        </div>
 
         <div class="contact-info">
           <div class="footer-col">
@@ -84,7 +89,6 @@
             <p id="footerPhones">+381 69 628 890, +381 60 557 7926</p>
           </div>
           <div class="footer-col map">
-            <strong data-i18n="footer.whereLabel">Where</strong>
             <div class="map-wrap">
               <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d6737.739527246156!2d20.479303831650697!3d44.763055567099826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2srs!4v1781609816564!5m2!1sen!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -100,7 +104,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="footer-inner container-full">
       <div>© <span id="year"></span> VoxPrepress</div>
       <nav class="footer-links">
         <a href="#">Privacy</a>
